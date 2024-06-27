@@ -1,16 +1,17 @@
 import './App.css';
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import SearchBar from './components/SearchBOX';
-import React from "react";
+import { React, useState } from "react";
+import "./App.css";
 
 
-const APP =() => {
-  return(
-<SearchBar />
-  )
-    
-
-};
+function App() {
+  return (
+    <div className="App">
+      <div>
+        <input placeholder="Enter The Title Of Movie" />
+      </div>
+    </div>
+  );
+}
 
 
 
