@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <input placeholder="Enter The Title Of Movie" />
+        <input placeholder="공연 정보 검색" />
       </div>
     </div>
   );
