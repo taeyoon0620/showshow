@@ -1,29 +1,17 @@
-import './App.css';
-import { React, useState } from "react";
-import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { ThemeProvider } from "./theme/themeProvider";
-import { GlobalStyle } from "./theme/globalstyle";
-import { Suspense } from "react";
-import Main from "./Main";
-import Sub from "./Sub";
-import { ThemeContext } from "./context/themeProvider";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SignUp from './components/SignUp';
+import HomePage from './components/HomePage';
 
-
-function App() {
-  return (
-    <BrowserRouter>
-      <ThemeProvider>
-        <GlobalStyle />
-        <Suspense fallback={<div>...loading</div>}>
-          <Switch>
-            <Route exact path="/" component={Main}/>
-            <Route exact path="/sub" component={Sub}/>
-          </Switch>
-        </Suspense>
-      </ThemeProvider>
-    </BrowserRouter>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/signup" component={SignUp} />
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;
