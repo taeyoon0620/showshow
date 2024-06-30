@@ -1,41 +1,18 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { Button, Container, Box, Typography } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Link, useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
-    const theme = createTheme();
-    const history = useHistory();
+    const navigate = useNavigate();
 
-    const navigateToSignUp = () => {
-        history.push('/signup');
+    const goToSignUp = () => {
+        navigate('/signup');
     };
 
     return (
-        <ThemeProvider theme={theme}>
-            <Container component="main" maxWidth="xs">
-                <Box
-                    sx={{
-                        marginTop: 8,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                    }}
-                >
-                    <Typography component="h1" variant="h5">
-                        Welcome to Our Website
-                    </Typography>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        sx={{ mt: 3, mb: 2 }}
-                        onClick={navigateToSignUp}
-                    >
-                        Go to Sign Up
-                    </Button>
-                </Box>
-            </Container>
-        </ThemeProvider>
+        <div>
+            <h1>Home Page</h1>
+            <button onClick={goToSignUp}>회원가입하기</button>
+        </div>
     );
 };
 
