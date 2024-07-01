@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Sidebar.css'; // Sidebar 컴포넌트에서 사용할 CSS 파일
+import './Sidebar.css'; 
 
 const Sidebar = () => {
     const navigate = useNavigate();

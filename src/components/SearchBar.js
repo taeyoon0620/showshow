@@ -1,6 +1,6 @@
 import React from "react";
-import './SearchBar.css'; // Import CSS file for SearchBar styles
-import logoImage from '../Images/LOGOIMAGE.PNG'; // Import logo image
+import './SearchBar.css'; 
+import logoImage from '../Images/LOGOIMAGE.PNG'; 
 
 const SearchBar = () => {
     return (

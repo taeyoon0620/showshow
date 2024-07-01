@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignUp from './components/SignUp';
 import HomePage from './components/HomePage';
-import logoImage from './Images/LOGOIMAGE.PNG'; // 이미지 파일 import
-import './App.css'; // App 컴포넌트에서 사용할 CSS 파일
-import Grid from './components/Grid'; // Import Grid component
+import logoImage from './Images/LOGOIMAGE.PNG'; 
+import './App.css'; 
+import Grid from './components/Grid'; 
 import SearchBar from './components/SearchBar';
-import { Card } from 'antd'; // Import Card component from Ant Design
-import Sidebar from './components/Sidebar'; // Import Sidebar component
+import { Card } from 'antd'; 
+import Sidebar from './components/Sidebar'; 
 const { Meta } = Card;
 
 const App = () => {
@@ -29,26 +29,21 @@ const App = () => {
     return (
         <Router>
             <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
-                {/* Sidebar */}
+
                 <Sidebar />
 
-                {/* Main content */}
                 <div className="main-content">
-                    {/* Toggle Button */}
+
                     <button className="toggle-button" onClick={toggleDarkMode}>
                         {darkMode ? '라이트 모드로 전환' : '다크 모드로 전환'}
                     </button>
 
-                    {/* Logo Image */}
                     <img src={logoImage} alt="Logo" className="logo-image" />
-
-                    {/* Grid Component */}
+            
                     <Grid />
 
-                    {/* Search Bar Component */}
                     <SearchBar />
-
-                    {/* Card Container */}
+                
                     <div className="card-container">
                         <Card
                             hoverable
@@ -84,7 +79,7 @@ const App = () => {
                     </div>
                 </div>
 
-                {/* Router and Routes */}
+
                 <Routes>
                     <Route path="/" element={<HomePage toggleDarkMode={toggleDarkMode} />} />
                     <Route path="/signup" element={<SignUp />} />

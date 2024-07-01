@@ -40,7 +40,7 @@ const SignUp = () => {
     const [passwordError, setPasswordError] = useState('');
     const [nameError, setNameError] = useState('');
     const [registerError, setRegisterError] = useState('');
-    const [openModal, setOpenModal] = useState(false); // State for modal
+    const [openModal, setOpenModal] = useState(false);
 
     const handleAgree = (event) => {
         setChecked(event.target.checked);
@@ -49,6 +49,7 @@ const SignUp = () => {
     const onhandlePost = async (data) => {
         const { email, name, password } = data;
         const postData = { email, name, password };
+        // Perform post request logic here
     };
 
     const handleSubmit = (e) => {
@@ -63,30 +64,24 @@ const SignUp = () => {
         };
         const { email, name, password, rePassword } = joinData;
 
-        // Email validation check
         const emailRegex = /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
         if (!emailRegex.test(email)) setEmailError('올바른 이메일 형식이 아닙니다.');
         else setEmailError('');
 
-        // Password validation check
         const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
         if (!passwordRegex.test(password))
             setPasswordState('숫자+영문자+특수문자 조합으로 8자리 이상 입력해주세요!');
         else setPasswordState('');
 
-        // Check if passwords match
         if (password !== rePassword) setPasswordError('비밀번호가 일치하지 않습니다.');
         else setPasswordError('');
 
-        // Name validation check
         const nameRegex = /^[가-힣a-zA-Z]+$/;
         if (!nameRegex.test(name) || name.length < 1) setNameError('올바른 이름을 입력해주세요.');
         else setNameError('');
 
-        // Check agreement
         if (!checked) alert('회원가입 약관에 동의해주세요.');
 
-        // If all validations pass, handle post request
         if (
             emailRegex.test(email) &&
             passwordRegex.test(password) &&
@@ -95,7 +90,7 @@ const SignUp = () => {
             checked
         ) {
             onhandlePost(joinData);
-            setOpenModal(true); // Open modal on successful submit
+            setOpenModal(true);
         }
     };
 
@@ -131,7 +126,7 @@ const SignUp = () => {
                                         id="email"
                                         name="email"
                                         label="이메일 주소"
-                                        error={emailError !== '' || false}
+                                        error={emailError !== ''}
                                     />
                                 </Grid>
                                 <FormHelperTexts>{emailError}</FormHelperTexts>
@@ -143,7 +138,7 @@ const SignUp = () => {
                                         id="password"
                                         name="password"
                                         label="비밀번호 (숫자+영문자+특수문자 8자리 이상)"
-                                        error={passwordState !== '' || false}
+                                        error={passwordState !== ''}
                                     />
                                 </Grid>
                                 <FormHelperTexts>{passwordState}</FormHelperTexts>
@@ -155,7 +150,7 @@ const SignUp = () => {
                                         id="rePassword"
                                         name="rePassword"
                                         label="비밀번호 재입력"
-                                        error={passwordError !== '' || false}
+                                        error={passwordError !== ''}
                                     />
                                 </Grid>
                                 <FormHelperTexts>{passwordError}</FormHelperTexts>
@@ -166,7 +161,7 @@ const SignUp = () => {
                                         id="name"
                                         name="name"
                                         label="이름"
-                                        error={nameError !== '' || false}
+                                        error={nameError !== ''}
                                     />
                                 </Grid>
                                 <FormHelperTexts>{nameError}</FormHelperTexts>
