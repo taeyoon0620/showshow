@@ -1,9 +1,8 @@
 [노태윤_기획서_최종본.md](https://github.com/user-attachments/files/16048901/_._.md)
-======
 ------
 
 __SHOWSHOW 기획서입니다.
-===========================================
+----------------------
 
 ![슬라이드1](https://github.com/taeyoon0620/showshow/assets/165011661/a94699e0-448c-4aac-b2ee-7022505e96d7)
 ![슬라이드2](https://github.com/taeyoon0620/showshow/assets/165011661/80060768-ecc5-4e2d-87a0-88eda8075072)
