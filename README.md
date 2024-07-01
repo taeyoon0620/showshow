@@ -1,1 +1,2 @@
-[노태윤_기획서_최종본.pptx](https://github.com/user-attachments/files/16048765/_._.pptx)
+[노태윤_기획서_최종본.md](https://github.com/user-attachments/files/16048873/_._.md)
+
