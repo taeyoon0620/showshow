@@ -4,6 +4,7 @@
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "name": "showshow",
+  "homepage": "https://taeyoon0620.github.io/showshow/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,6 +23,7 @@
     "bootstrap": "^5.3.3",
     "cross-env": "^7.0.3",
     "framer-motion": "^11.2.12",
+    "gh-pages": "^6.1.1",
     "history": "^5.3.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-calendar": "^5.0.0",
@@ -37,7 +39,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
