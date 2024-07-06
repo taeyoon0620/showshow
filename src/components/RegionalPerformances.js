@@ -1,10 +1,12 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
+import image23 from '../assets/23.png';
+import image22 from '../assets/22.png';
 
 const RegionalPerformances = () => {
     const performances = [
-        { title: '지역별 공연 ', image: 'ClassicConcert.PNG', height: '500px', width: '100%' },
-        { title: '지역별 공연 위치', image: 'Mapshow.PNG', height: '600px', width: '100%' }, // 높이와 길이 더 크게 설정
+        { title: '지역별 공연', image: image23 },
+        { title: '지역별 공연 위치', image: image22, larger: true },
     ];
 
     return (
@@ -18,9 +20,9 @@ const RegionalPerformances = () => {
                             src={performance.image}
                             alt={performance.title}
                             sx={{
-                                width: performance.width,
-                                height: performance.height,
-                                objectFit: 'cover', // 비율을 유지하면서 크기를 맞춤
+                                width: '100%',
+                                height: performance.larger ? '500px' : '400px',
+                                objectFit: 'cover',
                             }}
                         />
                         <Typography>{performance.title}</Typography>

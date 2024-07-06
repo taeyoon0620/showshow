@@ -1,14 +1,17 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
+import Concert from '../assets/Concert.PNG';  // 상대 경로로 이미지를 import합니다.
+import Concert2 from '../assets/Concert2.PNG';  // 상대 경로로 이미지를 import합니다.
+import 임영웅 from '../assets/임영웅.PNG';  // 상대 경로로 이미지를 import합니다.
 
 const RecentPerformances = () => {
     const performances = [
-        { title: '2024 임영웅 콘서트', image: '/임영웅.PNG' },
-        { title: '공연 2', image: '/Concert.PNG' },
-        { title: '공연 3', image: '/Concert2.PNG' },
+        { title: '2024 임영웅 콘서트', image: 임영웅 },  // import한 이미지를 사용합니다.
+        { title: '첼로 공연', image: Concert },  // import한 이미지를 사용합니다.
+        { title: '뮤지컬 공연', image: Concert2 },  // import한 이미지를 사용합니다.
     ];
 
-    const imageHeight = '200px'; // 원하는 높이로 설정
+    const imageHeight = '400px'; // 원하는 높이로 설정
 
     return (
         <Box mt={4}>
@@ -19,7 +22,7 @@ const RecentPerformances = () => {
                         <Box
                             component="img"
                             src={performance.image}
-                            alt="공연 사진"
+                            alt={performance.title}
                             sx={{
                                 width: '100%',
                                 height: imageHeight,

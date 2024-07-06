@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate  } from 'react-router-dom';
 import { Container, Grid, Box, Button } from '@mui/material';
 import Header from './components/Header';
 import SideMenu from './components/SideMenu';
@@ -7,8 +7,7 @@ import MainContent from './components/MainContent';
 import LoginArea from './components/LoginArea';
 import SNSLinks from './components/SNSLinks';
 import SignUp from './components/SignUp';
-import DarkModeToggle from './components/DarkModeToggle';
-import './App.css'; 
+import './App.css';
 
 const App = () => {
     const [darkMode, setDarkMode] = useState(false);
@@ -17,7 +16,9 @@ const App = () => {
         const body = document.body;
         if (darkMode) {
             body.classList.add('dark-mode');
+            body.classList.remove('light-mode');
         } else {
+            body.classList.add('light-mode');
             body.classList.remove('dark-mode');
         }
     }, [darkMode]);
@@ -41,6 +42,7 @@ const App = () => {
                             <Routes>
                                 <Route path="/" element={<MainContent />} />
                                 <Route path="/signup" element={<SignUp />} />
+                                <Route path="*" element={<Navigate to="/" />} />  {/* 기본 경로로 리다이렉션 */}
                             </Routes>
                         </Grid>
                         <Grid item xs={2}>
