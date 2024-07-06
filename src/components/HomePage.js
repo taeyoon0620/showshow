@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const HomePage = ({ toggleDarkMode }) => {
+const HomePage = ({ DarkModeToggle }) => {
     const navigate = useNavigate();
 
     const goToSignUp = () => {

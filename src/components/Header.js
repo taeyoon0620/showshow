@@ -6,7 +6,7 @@ import DarkModeToggle from './DarkModeToggle';
 const Header = ({ darkMode, toggleDarkMode }) => (
     <Box display="flex" justifyContent="space-between" alignItems="center">
         <Box display="flex" alignItems="center">
-            <img src="/logo.png" alt="showshow logo" style={{ width: '50px', marginRight: '10px' }} /> 
+            <img src="/logo.PNG" alt="showshow logo" style={{ width: '50px', marginRight: '10px' }} /> {/* 로고 추가 */}
             <Typography variant="h4">showshow</Typography>
         </Box>
         <Box display="flex" alignItems="center">

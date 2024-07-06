@@ -4,11 +4,11 @@ import { Box, Grid, Typography } from '@mui/material';
 const RecentPerformances = () => {
     const performances = [
         { title: '2024 임영웅 콘서트', image: '/임영웅.PNG' },
-        { title: '첼로 공연', image: '/Concert.PNG' },
-        { title: '뮤지컬 공연', image: '/Concert2.PNG' },
+        { title: '공연 2', image: '/Concert.PNG' },
+        { title: '공연 3', image: '/Concert2.PNG' },
     ];
 
-    const imageHeight = '500px'; // 원하는 높이로 설정
+    const imageHeight = '200px'; // 원하는 높이로 설정
 
     return (
         <Box mt={4}>

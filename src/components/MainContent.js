@@ -9,10 +9,24 @@ const MainContent = () => (
         <Typography variant="h5">시작하는 공연 정보</Typography>
         <Grid container spacing={2}>
             <Grid item xs={6}>
-                <CountdownTimer />
+                <Box 
+                    display="flex" 
+                    justifyContent="center" 
+                    alignItems="center" 
+                    height="100%"
+                >
+                    <CountdownTimer />
+                </Box>
             </Grid>
             <Grid item xs={6}>
-                <img src="/버스킹.PNG" alt="공연 사진" style={{ width: '100%' }} />
+                <Box 
+                    display="flex" 
+                    justifyContent="center" 
+                    alignItems="center" 
+                    height="100%"
+                >
+                    <img src="/버스킹.PNG" alt="공연 사진" style={{ height: '100%', objectFit: 'cover' }} />
+                </Box>
             </Grid>
         </Grid>
         <RecentPerformances />
