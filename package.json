@@ -4,6 +4,7 @@
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "name": "showshow",
+  "homepage": "https://taeyoon0620.github.io/showshow/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,7 +38,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -56,5 +59,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "prettier-plugin-tailwindcss": "^0.6.5"
   }
 }

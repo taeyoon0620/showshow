@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const HomePage = () => {
+const HomePage = ({ toggleDarkMode }) => {
     const navigate = useNavigate();
 
     const goToSignUp = () => {
@@ -9,9 +9,13 @@ const HomePage = () => {
     };
 
     return (
-        <div>
-            <h1>Home Page</h1>
-            <button onClick={goToSignUp}>회원가입하기</button>
+        <div className="App">
+            <div className="buttons-container">
+                <button className="signup-button" onClick={goToSignUp}>회원가입</button>
+            </div>
+            <div className="home-page-container">
+                <h1 className="title"></h1>
+            </div>
         </div>
     );
 };
