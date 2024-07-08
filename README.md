@@ -58,7 +58,7 @@
 ![슬라이드24](https://github.com/taeyoon0620/showshow/assets/165011661/1567ae0c-1c96-47eb-9ff2-f51e15469e1d)
 ![슬라이드25](https://github.com/taeyoon0620/showshow/assets/165011661/30a0c0b0-d0e1-4209-ac27-8636f65a0a79)
 ![슬라이드26](https://github.com/taeyoon0620/showshow/assets/165011661/e6a61e0d-be47-4221-af2f-2dc685768748)
-![슬라이드27](https://github.com/taeyoon0620/showshow/assets/165011661/94e6ffc8-77a3-4a6a-97d5-c7e22aa48aa0)
+![기획서  Copy of Index html (2)](https://github.com/taeyoon0620/showshow/assets/165011661/547e7f77-4ba8-417b-89b1-466e08efe03d)
 ![슬라이드28](https://github.com/taeyoon0620/showshow/assets/165011661/68b992b5-5625-4a43-ad19-dea3d64bbba3)
 ![슬라이드29](https://github.com/taeyoon0620/showshow/assets/165011661/baea635a-a7e7-4cd7-a709-f35f7c7f8d17)
 ![노태윤_기획서_최종본 (1)](https://github.com/taeyoon0620/TIL/assets/165011661/dad0ee7e-7e17-4043-b825-6a03e1d221ec)
